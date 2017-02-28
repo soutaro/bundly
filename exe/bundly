@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+
+$LOAD_PATH << Pathname(__dir__) + "../lib"
+
+require "bundly"
+require "bundly/cli"
+
+Bundly::CLI.start(ARGV)

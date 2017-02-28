@@ -1,0 +1,4 @@
+---
+- name: thor
+- name: querly
+  version: "~> 0.3.0"
