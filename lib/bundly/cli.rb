@@ -10,6 +10,12 @@ module Bundly
       template = Pathname(__dir__) + "template.rb.erb"
       init_script = Pathname(options[:init])
 
+      unless init_script.parent.directory?
+        puts "No directory for init script: #{init_script}"
+        puts "> mkdir #{init_script.parent}"
+        exit
+      end
+
       init_script.open("w") do |io|
         io.write Erubis::Eruby.new(template.read).result
       end
