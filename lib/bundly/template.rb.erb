@@ -10,8 +10,9 @@ module Bundly
       git = gem["git"]
       branch = gem["branch"]
       tag = gem["tag"]
+      require = gem["require"]
 
-      gem name, version, git: git, branch: branch, tag: tag
+      gem name, version, git: git, branch: branch, tag: tag, require: require
     end
   end
 end
